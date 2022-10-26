@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+  /*  background-image: url("https://img.freepik.com/vector-gratis/vector-textura-apenado-grunge-blanco_53876-78199.jpg?w=2000");
+*/
+}
+
+nav {
+
+    background-color: darkgoldenrod;
+}
+
+.enlaces a{
+
+    margin: auto;
+    padding: 2%;
+    text-decoration: none;
+
+}
+
+
+
+.aside {
+
+    padding: 2%;
+    background-color: rgb(92, 92, 250);
+    
+
+}
+
+
+
+.bienvenida {
+
+    margin: 0 auto;
+    padding: 2%;
+    border: 1px solid sienna;
+    background-color: rgba(109, 6, 6, 0.836);
+
+}
+
+.bienvenida img, .aside img {
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px black;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    
+
+
+}
+
+
+
+footer {
+
+    margin: auto;
+    text-align: center;
+
+}
+
+
+
+.contenedor-grid {
+
+    padding: 1%;
+    margin: auto;
+    width:80%;
+    border: 1px solid rgb(177, 11, 11);
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-areas:
+
+        "header header"
+        "nav nav"
+        "bienvenida aside"
+        "footer footer";
+    gap: 5px;
+
+}
+
+
+.header {
+
+    grid-area: header;
+    border: 1px solid black;
+   
+}
+
+nav {
+
+    grid-area: nav;
+    border: 1px solid black;
+}
+
+.bienvenida {
+
+    grid-area: bienvenida;
+    border: 1px solid black;
+}
+
+
+.aside {
+
+    grid-area: aside;
+    border: 1px solid black;
+
+}
+
+.footer {
+
+    grid-area: footer;
+    border: 1px solid black;
+}
+
+
+
+@media (max-width:600px) {
+
+    .contenedor-grid {
+
+        padding: 1%;
+        width: 90%;
+        margin: auto;
+        border: 1px solid rgb(177, 11, 11);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+    
+            "header"
+            "nav"
+            "bienvenida"
+            "aside"
+            "footer";
+        gap: 5px;
+    
+    }
+}
