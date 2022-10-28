@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-  /*  background-image: url("https://img.freepik.com/vector-gratis/vector-textura-apenado-grunge-blanco_53876-78199.jpg?w=2000");
-*/
+    background-image: url("https://img.freepik.com/free-photo/dark-texture-watercolor_125540-769.jpg?w=2000");
+
 }
 
 nav {
@@ -10,7 +10,7 @@ nav {
     background-color: darkgoldenrod;
 }
 
-.enlaces a{
+.enlaces a {
 
     margin: auto;
     padding: 2%;
@@ -23,8 +23,8 @@ nav {
 .aside {
 
     padding: 2%;
-    background-color: rgb(92, 92, 250);
-    
+    background-color: rgba(92, 92, 250, 0.808);
+
 
 }
 
@@ -39,15 +39,16 @@ nav {
 
 }
 
-.bienvenida img, .aside img {
+.bienvenida img,
+.aside img {
 
     border-radius: 5px;
     box-shadow: 2px 2px 5px 0px black;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    
-    
+
+
 
 
 }
@@ -67,7 +68,7 @@ footer {
 
     padding: 1%;
     margin: auto;
-    width:80%;
+    width: 80%;
     border: 1px solid rgb(177, 11, 11);
     display: grid;
     grid-template-columns: 70%;
@@ -82,11 +83,11 @@ footer {
 }
 
 
-.header {
+header {
 
     grid-area: header;
     border: 1px solid black;
-   
+    height: 60px;
 }
 
 nav {
@@ -109,7 +110,7 @@ nav {
 
 }
 
-.footer {
+footer {
 
     grid-area: footer;
     border: 1px solid black;
@@ -117,7 +118,7 @@ nav {
 
 
 
-@media (max-width:600px) {
+@media (max-width:850px) {
 
     .contenedor-grid {
 
@@ -128,13 +129,122 @@ nav {
         display: grid;
         grid-template-columns: 100%;
         grid-template-areas:
-    
+
             "header"
             "nav"
             "bienvenida"
             "aside"
             "footer";
         gap: 5px;
-    
+
+    }
+
+
+}
+
+
+/*estilo works*/
+
+
+
+
+.contenedor-grid2 {
+
+    padding: 1%;
+    margin: auto;
+    width: 80%;
+    border: 1px solid rgb(177, 11, 11);
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-areas:
+
+        "header header"
+        "nav nav"
+        "albums albums"
+        "videos videos"
+        "footer footer";
+    gap: 5px;
+
+}
+
+
+header {
+
+    grid-area: header;
+    border: 1px solid black;
+
+}
+
+nav {
+
+    grid-area: nav;
+    border: 1px solid black;
+}
+
+.albums {
+
+    grid-area: albums;
+    border: 1px solid black;
+    background-color: rgba(109, 6, 6, 0.836);
+    padding: 2%;
+
+
+}
+
+
+.albums img {
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px black;
+}
+
+
+.videos {
+
+    grid-area: videos;
+    border: 1px solid black;
+    background-color: rgba(92, 92, 250, 0.795);
+    padding: 2%;
+}
+
+
+.videos img {
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px black;
+}
+
+
+footer {
+
+    grid-area: footer;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+@media (max-width:850) {
+
+    .contenedor-grid2 {
+
+        padding: 1%;
+        margin: auto;
+        width: 80%;
+        border: 1px solid rgb(177, 11, 11);
+        display: grid;
+        grid-template-columns: 70%;
+        grid-template-areas:
+
+            "header"
+            "nav"
+            "albums"
+            "videos"
+            "footer";
+        gap: 5px;
+
     }
 }
