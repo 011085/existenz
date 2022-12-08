@@ -1,30 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
-    background-image: url("https://img.freepik.com/free-photo/dark-texture-watercolor_125540-769.jpg?w=2000");
+    font-family: 'Cutive Mono', monospace;
+
 
 }
+
+
+header {
+
+    margin: 0px;
+    text-align: center;
+    letter-spacing: 15px;
+   
+}
+
 
 nav {
 
-    background-color: darkgoldenrod;
+    border-radius: 5px;
+
 }
 
-.enlaces a {
+.enlaces a, a {
 
     margin: auto;
     padding: 2%;
     text-decoration: none;
-
-}
-
-
-
-.aside {
-
-    padding: 2%;
-    background-color: rgba(92, 92, 250, 0.808);
-
+    color: black;
+    letter-spacing: 10px;
 
 }
 
@@ -32,35 +39,56 @@ nav {
 
 .bienvenida {
 
-    margin: 0 auto;
+    margin: auto;
     padding: 2%;
-    border: 1px solid sienna;
-    background-color: rgba(109, 6, 6, 0.836);
+    
 
 }
 
-.bienvenida img,
-.aside img {
+.bienvenida img {
 
     border-radius: 5px;
     box-shadow: 2px 2px 5px 0px black;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+
+}
+
+
+.ingles, p {
+
+    font-size: 0.9rem;
+    text-shadow: 2px 2px 5px black;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+
+.aside {
+
+    padding: 2%;
+    
+}
+
+
+h3 {
+
+    text-align: center;
+    text-shadow: 0px 2px 5px white;
+}
+
+
+.aside img {
+
+    width: 200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
 
-
-
-
 }
 
-
-
-footer {
-
-    margin: auto;
-    text-align: center;
-
-}
 
 
 
@@ -69,9 +97,8 @@ footer {
     padding: 1%;
     margin: auto;
     width: 80%;
-    border: 1px solid rgb(177, 11, 11);
     display: grid;
-    grid-template-columns: 70%;
+    grid-template-columns: 70% 30%;
     grid-template-areas:
 
         "header header"
@@ -86,8 +113,8 @@ footer {
 header {
 
     grid-area: header;
-    border: 1px solid black;
-    height: 60px;
+    height: 50px;
+    margin: 1em auto;
 }
 
 nav {
@@ -100,6 +127,7 @@ nav {
 
     grid-area: bienvenida;
     border: 1px solid black;
+    margin: 0px auto;
 }
 
 
@@ -113,7 +141,8 @@ nav {
 footer {
 
     grid-area: footer;
-    border: 1px solid black;
+    margin: 1em auto;
+    
 }
 
 
@@ -123,9 +152,8 @@ footer {
     .contenedor-grid {
 
         padding: 1%;
-        width: 90%;
         margin: auto;
-        border: 1px solid rgb(177, 11, 11);
+        width: 80%;
         display: grid;
         grid-template-columns: 100%;
         grid-template-areas:
@@ -140,6 +168,14 @@ footer {
     }
 
 
+    .aside img {
+
+        margin: auto;
+    }
+
+
+
+
 }
 
 
@@ -148,21 +184,20 @@ footer {
 
 
 
-.contenedor-grid2 {
+.contenedor-grid-works {
 
     padding: 1%;
-    margin: auto;
+    margin: 0px auto;
     width: 80%;
-    border: 1px solid rgb(177, 11, 11);
     display: grid;
-    grid-template-columns: 70%;
+    grid-template-columns: 40% 60%;
     grid-template-areas:
 
         "header header"
         "nav nav"
-        "albums albums"
-        "videos videos"
+        "albums videos"
         "footer footer";
+
     gap: 5px;
 
 }
@@ -171,7 +206,7 @@ footer {
 header {
 
     grid-area: header;
-    border: 1px solid black;
+   
 
 }
 
@@ -185,17 +220,23 @@ nav {
 
     grid-area: albums;
     border: 1px solid black;
-    background-color: rgba(109, 6, 6, 0.836);
     padding: 2%;
 
 
 }
 
 
+
 .albums img {
 
     border-radius: 5px;
     box-shadow: 2px 2px 5px 0px black;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 70%;
+
+
 }
 
 
@@ -203,40 +244,46 @@ nav {
 
     grid-area: videos;
     border: 1px solid black;
-    background-color: rgba(92, 92, 250, 0.795);
     padding: 2%;
+    margin: 0px auto;
+
+
 }
 
 
-.videos img {
+iframe {
 
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 0px black;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
+
 
 
 footer {
 
     grid-area: footer;
-    border: 1px solid black;
+    margin: 1em auto;
 }
 
 
+p {
+
+    padding: 3%;
+    align-items: center;
+}
 
 
+@media (max-width:850px) {
 
 
-
-@media (max-width:850) {
-
-    .contenedor-grid2 {
+    .contenedor-grid-works {
 
         padding: 1%;
         margin: auto;
         width: 80%;
-        border: 1px solid rgb(177, 11, 11);
         display: grid;
-        grid-template-columns: 70%;
+        grid-template-columns: 100%;
         grid-template-areas:
 
             "header"
@@ -244,7 +291,9 @@ footer {
             "albums"
             "videos"
             "footer";
+
         gap: 5px;
 
     }
+
 }
